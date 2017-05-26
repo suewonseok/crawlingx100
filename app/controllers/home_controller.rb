@@ -10,9 +10,9 @@ class HomeController < ApplicationController
     
     topic_list = Array.new
     
-    uri = 'http://news.naver.com/main/main.nhn?mode=LSD&mid=shm&sid1=105'
+    uri = 'http://news.naver.com/main/list.nhn?mode=LSD&mid=sec&sid1=105'
     result = Nokogiri::HTML(open(uri))
-    result.css('div.list_body.section_index dl dt:nth-child(2) a').each do |x|
+    result.css('ul.type06_headline li dl dt:nth-child(2) a').each do |x|
       topic_list.push(x.text())
     end
     num = Array(1..100)
