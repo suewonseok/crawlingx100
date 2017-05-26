@@ -1,0 +1,16 @@
+<div class ="container" style="border: 1px solid gold; margin-top:50px;">
+    <h1 style="text-align:center; padding-top:50px; padding-bottom:50px;">수정 페이지</h1><br>
+   
+    <form action='/update/<%=@getByedit.id%>' method='post'>
+        
+        <div style="width:700px; margin:0px auto;">
+            <div style="font-weight:bold; margin-bottom:50px;"><%=@getByedit.number%> TH 뉴스</div>
+            <textarea style="padding-top:50px;"class="form-control" id="exampleTextarea" rows="3" name="수정하기"><%=@getByedit.nameone%></textarea>
+            <div class ="d-flex flex-row-reverse" style="padding-top:20px; padding-bottom:20px;"><button  type="submit" class="btn btn-primary p-2">입력완료</button>
+            </div>
+        </div>
+        
+        
+            
+    </form>
+</div>

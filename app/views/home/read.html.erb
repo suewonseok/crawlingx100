@@ -1,0 +1,21 @@
+<h1 class = "container" style="text-align:center; margin-top:50px; margin-bottom:50px;">IT 뉴스 100&nbsp<a style="font-weight:bold; font-size:1rem;text-decoration:none; color:black;" href='/create'><뉴스 받아오기></a></h1>
+
+
+
+<div class = "container" style="width:1000px; margin:50px auto; border:1.5px solid black;">
+
+    
+    <% @getBycreate.each do |title| %>
+    
+    <br>
+      <div class="d-flex justify-content-start">
+          <div class="p-2">[<%= title.number%>] <%= title.nameone%></div>
+          <div class="ml-auto p-2"><a style="text-decoration:none; color:black;" href='/destroy/<%=title.id%>'>[삭제하기]</a>&nbsp
+                                  <a style="text-decoration:none; color:black;" href='/edit/<%=title.id%>'>[수정하기]</a>
+          </div>
+      </div>
+    <hr>
+    
+    
+    <% end %>
+</div>
